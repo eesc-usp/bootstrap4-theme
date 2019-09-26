@@ -1,0 +1,41 @@
+{
+    "name": "eesc-usp/bootstrap4-theme",
+    "description": "Tema para sistemas administrativos da eesc-usp",
+    "authors": [
+        {
+            "name": "Masaki Kawabata Neto",
+            "email": "kawabata@usp.br"
+        }
+    ],
+    "require": {
+        "oomphinc/composer-installers-extender": "^1.1",
+        "bower-asset/bootstrap4": "^4.3",
+        "bower-asset/fontawesome": "^5.11",
+        "bower-asset/datatables": "^1.10",
+        "bower-asset/jquery": "^3.4",
+        "raelgc/template": "^2.2"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "extra": {
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "www/assets/{$name}/": [
+                "type:bower-asset",
+                "type:npm-asset"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "EESC\\": "src"
+        }
+    }
+}

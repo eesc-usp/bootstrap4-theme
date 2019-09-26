@@ -1,0 +1,49 @@
+<style>
+    .userbar {
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+        background-color: lightgray;
+        height: 30px;
+        color: #333;
+        margin-bottom: 5px;
+        padding-top: 4px;
+        font-family: Arial;
+        font-size: 15px;
+    }
+</style>
+
+<!-- BEGIN LOGGED_IN -->
+<div Class="d-flex justify-content-end">
+    <div class="dropdown pr-2">
+        <a class="dropdown-toggle nounderline" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            {user}
+            <!-- BEGIN ROLE --> | {role}
+            <!-- END ROLE -->
+        </a>
+        <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Trocar senha</a>
+            <a class="dropdown-item" href="#">Trocar perfil</a>
+            <a class="dropdown-item" href="#">Configurações</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{logout_url}">Sair</a>
+        </div>
+    </div>
+    <div>
+        | <form action="{logout_url}" method="POST" class="form-inline" style="display:inline-block" id="logout_form">
+            <!-- O uso do link ao invés do botao é para poder formatar corretamente -->
+            <a href="javascript: {}" onclick="document.getElementById('logout_form').submit(); return false;"
+                class="font-weight-bold nounderline pr-2">
+                Sair <i class="fa fa-sign-out-alt"></i></a>
+        </form>
+
+    </div>
+</div>
+<!-- END LOGGED_IN -->
+
+<!-- BEGIN LOGGED_OUT -->
+Não autenticado |
+<strong><a class="nounderline pr-2" href="{login_url}">&nbsp;
+        <i class="fa fa-sign-in-alt"></i> Entrar
+    </a></strong>
+<!-- END LOGGED_OUT -->

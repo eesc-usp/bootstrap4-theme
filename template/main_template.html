@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sistemas EESC</title>
+
+    <link rel="shortcut icon" href="bootstrap4-theme/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="bootstrap4-theme/theme.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap4/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/datatables/media/css/dataTables.bootstrap4.min.css">
+
+    <script type="text/javascript" src="assets/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap4/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="assets/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+
+    <style>
+        .cabecalho {
+            height: 70px;
+            background-color: #EDEDEE;
+            color: #444;
+            font-family: Arial;
+            font-size: 20px;
+
+        }
+
+        .cabecalho h5 small {
+            color: #666;
+        }
+
+        ul.ui-autocomplete {
+            z-index: 1100;
+        }
+
+        .nounderline {
+            text-decoration: none !important
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-3 text-center cabecalho">
+                <a href="http://www.eesc.usp.br" target="_blank">
+                    <img src="eesc-theme/logo_eesc_horizontal.png" alt="Escola de Engenharia de São Carlos" />
+                </a>
+            </div>
+            <div class="col-md-9 text-right cabecalho" style="padding: 10px 15px;">
+                Inscrições para Processo Seletivo de Pós-Graduação<br />
+                <small>Escola de Engenharia de São Carlos</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="userbar">
+                    <div Class="d-flex justify-content-end">
+                        {userbar}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {navbar}
+
+        <div class="row">
+            <div class="col-md-12">
+                {corpo}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="rodape text-center">
+                    {rodape}
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Close Container -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+
+</html>

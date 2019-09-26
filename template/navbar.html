@@ -1,0 +1,45 @@
+<style>
+    .main_navbar {
+        background-color: #055489;
+    }
+</style>
+
+<nav class="navbar navbar-expand-sm mb-3 py-0 navbar-dark main_navbar">
+    <!-- <a class="navbar-brand" href="#">
+        Início
+    </a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <!-- BEGIN NAVBAR_ITEM -->
+            <li class="nav-item {main_menu_active}">
+                <a class="nav-link" href="{nb_url}" title="{nb_title}">{nb_text}</a>
+            </li>
+            <!-- END NAVBAR_ITEM -->
+            <!-- <li class="nav-item active"><a class="nav-link" href="#">Default 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Default 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Default 3</a></li> -->
+            <!-- FINALLY NAVBAR_ITEM-->
+
+        </ul>
+        <ul class="navbar-nav justify-content-end">
+
+            <!-- BEGIN NAVBAR_ITEM_RIGHT -->
+            <li class="nav-item text-right">
+                <a class="nav-link" href="{nb_url}" title="{nb_title}" data-toggle="tooltip" data-placement="bottom">
+                    {nb_text}</a>
+            </li>
+            <!-- END NAVBAR_ITEM_RIGHT -->
+
+            <!-- <li class="nav-item text-right">
+                <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom"
+                    title="Esta configuração é opcional"><i class="fas fa-cog"></i>
+                </a>
+            </li> -->
+
+            <!-- FINALLY NAVBAR_ITEM_RIGHT -->
+        </ul>
+    </div>
+</nav>
