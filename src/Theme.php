@@ -5,7 +5,7 @@ class Theme
 {
     public static function renderNavbar($navbar)
     {
-        $tpl = new \raelgc\view\Template('../template/navbar.html');
+        $tpl = new \raelgc\view\Template(__DIR__ . '/../template/navbar.html');
         foreach ($navbar['navbar_left'] as $nb) {
             $tpl->nb_url = $nb['url'];
             $tpl->nb_text = $nb['text'];
@@ -25,7 +25,7 @@ class Theme
 
     public static function renderUserbar($userbar)
     {
-        $tpl = new \raelgc\view\Template('../template/userbar.html');
+        $tpl = new \raelgc\view\Template(__DIR__ . '/../template/userbar.html');
 
         if ($userbar['login']) {
             $tpl->user = $userbar['username'];
@@ -44,5 +44,12 @@ class Theme
         };
 
         return $tpl->parse();
+    }
+
+    public static function postInstall () {
+        //$vendorDir = $event->getComposer()->getConfig()->get('vendor-dir');
+        //echo $vendorDir;
+        exec('rm -rf ./www/eesc-theme');
+        exec('cp -r '.__DIR__.'/../asset/eesc-theme ./www/');
     }
 }
