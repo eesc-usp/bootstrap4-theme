@@ -22,7 +22,7 @@
         }
     ],
     "extra": {
-        "asset-dir": "asset",
+        "assets-dir": "asset",
         "installer-types": [
             "bower-asset",
             "npm-asset"
