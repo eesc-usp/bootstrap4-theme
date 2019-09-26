@@ -9,7 +9,7 @@ class Theme
         foreach ($navbar['navbar_left'] as $nb) {
             $tpl->nb_url = $nb['url'];
             $tpl->nb_text = $nb['text'];
-            $tpl->nb_title = $nb['title'] ?: '';
+            $tpl->nb_title = !empty($nb['title']) ?: '';
             $tpl->block('NAVBAR_ITEM');
         }
 
@@ -29,11 +29,12 @@ class Theme
 
         if ($userbar['login']) {
             $tpl->user = $userbar['username'];
-            if ($userbar['role']) {
+            if (!empty($userbar['role'])) {
                 $tpl->role = $userbar['role'];
                 $tpl->block('ROLE');
             }
             $tpl->logout_url = $userbar['logout_url'];
+            $tpl->logout_method = $userbar['logout_method'];
             $tpl->block('LOGGED_IN');
 
         } else {

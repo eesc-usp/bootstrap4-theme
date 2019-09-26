@@ -25,10 +25,9 @@
             color: #444;
             font-family: Arial;
             font-size: 20px;
-
         }
 
-        .cabecalho h5 small {
+        .cabecalho small {
             color: #666;
         }
 
@@ -36,6 +35,7 @@
             z-index: 1100;
         }
 
+        /* Isso vai ser usado em vários lugares */
         .nounderline {
             text-decoration: none !important
         }
@@ -46,15 +46,14 @@
 <body>
     <div class="container-fluid">
 
-        <div class="row">
-            <div class="col-md-3 text-center cabecalho">
+        <div class="row cabecalho">
+            <div class="col-md-3">
                 <a href="http://www.eesc.usp.br" target="_blank">
                     <img src="eesc-theme/logo_eesc_horizontal.png" alt="Escola de Engenharia de São Carlos" />
                 </a>
             </div>
-            <div class="col-md-9 text-right cabecalho" style="padding: 10px 15px;">
-                Inscrições para Processo Seletivo de Pós-Graduação<br />
-                <small>Escola de Engenharia de São Carlos</small>
+            <div class="col-md-9 text-right h5" style="padding: 10px 15px;">
+                {titulo}
             </div>
         </div>
 
@@ -87,6 +86,7 @@
     </div> <!-- Close Container -->
     <script>
         $(function () {
+            // vamos habilitar o tooltip em tudo
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
