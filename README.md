@@ -28,6 +28,8 @@ Depois
 
 ```
 Composer require eesc/bootstrap4-theme
+composer run-script post-update-cmd -d ./vendor/eesc-usp/bootstrap4-theme
+> EESC\Theme::postInstall
 ```
 
 

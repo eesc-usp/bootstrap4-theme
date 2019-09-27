@@ -22,7 +22,7 @@
         }
     ],
     "extra": {
-        "assets-dir": "asset",
+        "assets-dir": "assets",
         "installer-types": [
             "bower-asset",
             "npm-asset"
@@ -38,8 +38,5 @@
         "psr-4": {
             "EESC\\": "src"
         }
-    },
-    "scripts": {
-        "post-update-cmd": "EESC\\Theme::postInstall"
     }
 }
